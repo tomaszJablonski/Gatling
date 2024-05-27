@@ -1,0 +1,20 @@
+RUN	io.gatling.demo.RecordedSimulationByProxy2	recordedsimulationbyproxy2	1716830391486	 	3.11.3
+USER	RecordedSimulationByProxy2	START	1716830391917
+REQUEST		request_0	1716830391912	1716830392033	OK	 
+REQUEST		request_1	1716830392059	1716830392123	OK	 
+REQUEST		request_2	1716830392060	1716830392304	OK	 
+REQUEST		request_3	1716830393322	1716830393426	OK	 
+ERROR	request_4: Resource io/gatling/demo/recordedsimulationbyproxy2/0004_request.dat not found 	1716830393429
+ERROR	request_5: Resource io/gatling/demo/recordedsimulationbyproxy2/0005_request.json not found 	1716830393430
+REQUEST		request_6	1716830396434	1716830396489	OK	 
+ERROR	request_7: Resource io/gatling/demo/recordedsimulationbyproxy2/0007_request.dat not found 	1716830396489
+ERROR	request_8: Resource io/gatling/demo/recordedsimulationbyproxy2/0008_request.bin not found 	1716830396490
+REQUEST		request_11	1716830396502	1716830396587	OK	 
+REQUEST		request_13	1716830396490	1716830396591	OK	 
+REQUEST		request_12	1716830396501	1716830396852	OK	 
+REQUEST		request_9	1716830396491	1716830396863	OK	 
+REQUEST		request_14	1716830396501	1716830396864	OK	 
+REQUEST		request_10	1716830396501	1716830396865	OK	 
+ERROR	request_15: Resource io/gatling/demo/recordedsimulationbyproxy2/0015_request.dat not found 	1716830406869
+ERROR	request_22: Resource io/gatling/demo/recordedsimulationbyproxy2/0022_request.dat not found 	1716830409884
+USER	RecordedSimulationByProxy2	END	1716830409889
