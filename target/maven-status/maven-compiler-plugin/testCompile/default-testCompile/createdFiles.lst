@@ -1,4 +1,6 @@
 io\gatling\demo\RecordedSimulationByProxy2.class
 io\gatling\demo\RecordedSimulationByHdr.class
 computerdatabase\ComputerDatabaseSimulation.class
+io\gatling\demo\RecordedSimulation.class
 io\gatling\demo\RecordedSimulationByProxy3.class
+io\gatling\computerDatabase\SeparateMethodsAddUsers.class

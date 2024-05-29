@@ -1,0 +1,9 @@
+RUN	io.gatling.computerDatabase.RecordedSimulationByHdr1	recordedsimulationbyhdr1	1716996710177	 	3.11.3
+USER	RecordedSimulationByHdr1	START	1716996710623
+REQUEST		Click add new Computer	1716996710593	1716996710981	OK	 
+REQUEST		Add new computer	1716996715049	1716996715170	OK	 
+REQUEST		Add new computer Redirect 1	1716996715188	1716996715310	OK	 
+REQUEST		Choose one random computer	1716996719323	1716996719445	OK	 
+REQUEST		Delete the random computer	1716996722459	1716996722578	OK	 
+REQUEST		Delete the random computer Redirect 1	1716996722580	1716996722704	OK	 
+USER	RecordedSimulationByHdr1	END	1716996722709
