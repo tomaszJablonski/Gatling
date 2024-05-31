@@ -1,4 +1,4 @@
-package api;
+package regresInAndComputerDatabaseSite;
 
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
@@ -48,7 +48,7 @@ public class RegresInSimulation extends Simulation {
                     .post("/users")
                     .header("content-type", "application/json")
                     .asJson()
-                    .body(RawFileBody("regresIn/postRegresIn.json"))
+                    .body(RawFileBody("regresInAndComputerDatabaseSite/postRegresIn.json"))
                     .check(status().is(201),
                             jsonPath("$.name").is("morpheus")
                     )
@@ -59,7 +59,7 @@ public class RegresInSimulation extends Simulation {
                     .put("/users/394")
                     .header("content-type", "application/json")
                     .asJson()
-                    .body(RawFileBody("regresIn/putRegresIn.json"))
+                    .body(RawFileBody("regresInAndComputerDatabaseSite/putRegresIn.json"))
                     .check(status().is(200),
                             jsonPath("$.name").is("Neo")
                     )

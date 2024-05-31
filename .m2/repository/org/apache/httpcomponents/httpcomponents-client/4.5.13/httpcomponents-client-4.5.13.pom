@@ -352,7 +352,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>clirr-maven-plugin</artifactId>
         <configuration>
-          <comparisonVersion>${api.comparison.version}</comparisonVersion>
+          <comparisonVersion>${regresInAndComputerDatabaseSite.comparison.version}</comparisonVersion>
         </configuration>
       </plugin>
       <plugin>
@@ -401,7 +401,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>clirr-maven-plugin</artifactId>
         <configuration>
-          <comparisonVersion>${api.comparison.version}</comparisonVersion>
+          <comparisonVersion>${regresInAndComputerDatabaseSite.comparison.version}</comparisonVersion>
         </configuration>
       </plugin>
 

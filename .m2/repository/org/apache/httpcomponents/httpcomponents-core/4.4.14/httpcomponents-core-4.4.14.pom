@@ -295,7 +295,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>clirr-maven-plugin</artifactId>
         <configuration>
-          <comparisonVersion>${api.comparison.version}</comparisonVersion>
+          <comparisonVersion>${regresInAndComputerDatabaseSite.comparison.version}</comparisonVersion>
           <excludes>
             <exclude>org/apache/http/annotation/**</exclude>
           </excludes>
@@ -353,7 +353,7 @@
         <artifactId>clirr-maven-plugin</artifactId>
         <version>${hc.clirr.version}</version>
         <configuration>
-          <comparisonVersion>${api.comparison.version}</comparisonVersion>
+          <comparisonVersion>${regresInAndComputerDatabaseSite.comparison.version}</comparisonVersion>
         </configuration>
       </plugin>
 
