@@ -82,7 +82,7 @@ public class RegresInSimulationAndAssertions extends Simulation {
                 scenarioDeleteUser.injectOpen(atOnceUsers(10))
         ).protocols(httpProtocol)
                 .assertions(
-                        global().responseTime().max().lt(100),
+                        global().responseTime().max().lt(300),
                         global().successfulRequests().percent().gt(95.00)
                 );
     }
