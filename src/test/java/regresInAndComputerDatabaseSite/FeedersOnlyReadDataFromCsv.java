@@ -14,7 +14,7 @@ public class FeedersOnlyReadDataFromCsv extends Simulation {
     private final FeederBuilder.Batchable<String> feeder =
             csv("feeders/data.csv").circular();
 
-    private ScenarioBuilder scenarioFeeder = scenario("Use Feeder")
+    private final ScenarioBuilder scenarioFeeder = scenario("Use Feeder")
             .repeat(1).on(
                     feed(feeder)
                             .exec(session -> {

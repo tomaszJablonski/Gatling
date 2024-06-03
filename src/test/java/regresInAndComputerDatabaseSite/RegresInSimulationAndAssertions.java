@@ -8,14 +8,14 @@ import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.http;
 import static io.gatling.javaapi.http.HttpDsl.status;
 
-public class RegresInSimulation extends Simulation {
+public class RegresInSimulationAndAssertions extends Simulation {
 
     //protocol
-    private HttpProtocolBuilder httpProtocol = http
+    private final HttpProtocolBuilder httpProtocol = http
             .baseUrl("https://reqres.in/api");
 
     //scenario
-    private ScenarioBuilder scenarioGetUser = scenario("Get single user")
+    private final ScenarioBuilder scenarioGetUser = scenario("Get single user")
             .exec(http("Get user")
                     //tutaj podajemy path i query paramas
                     .get("/users/2")
@@ -29,7 +29,7 @@ public class RegresInSimulation extends Simulation {
                     )
             );
 
-    private ScenarioBuilder scenarioPostUser = scenario("Post user")
+    private final ScenarioBuilder scenarioPostUser = scenario("Post user")
             .exec(http("Create user")
                     .post("/users")
                     .header("content-type", "application/json")
@@ -43,7 +43,7 @@ public class RegresInSimulation extends Simulation {
                     )
             );
 
-    private ScenarioBuilder scenarioPostUserFromFile = scenario("Post user from File")
+    private final ScenarioBuilder scenarioPostUserFromFile = scenario("Post user from File")
             .exec(http("Create user from File")
                     .post("/users")
                     .header("content-type", "application/json")
@@ -54,7 +54,7 @@ public class RegresInSimulation extends Simulation {
                     )
             );
 
-    private ScenarioBuilder scenarioPutUserFromFile = scenario("Put user from File")
+    private final ScenarioBuilder scenarioPutUserFromFile = scenario("Put user from File")
             .exec(http("Update user from File")
                     .put("/users/394")
                     .header("content-type", "application/json")
@@ -65,7 +65,7 @@ public class RegresInSimulation extends Simulation {
                     )
             );
 
-    private ScenarioBuilder scenarioDeleteUser = scenario("Delete user")
+    private final ScenarioBuilder scenarioDeleteUser = scenario("Delete user")
             .exec(http("Delete user")
                     .delete("/users/2")
                     .check(
@@ -80,6 +80,10 @@ public class RegresInSimulation extends Simulation {
                 scenarioPostUserFromFile.injectOpen((atOnceUsers(10))),
                 scenarioPutUserFromFile.injectOpen(atOnceUsers(10)),
                 scenarioDeleteUser.injectOpen(atOnceUsers(10))
-        ).protocols(httpProtocol);
+        ).protocols(httpProtocol)
+                .assertions(
+                        global().responseTime().max().lt(100),
+                        global().successfulRequests().percent().gt(95.00)
+                );
     }
 }

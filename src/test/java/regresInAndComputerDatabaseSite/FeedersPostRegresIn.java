@@ -24,7 +24,7 @@ public class FeedersPostRegresIn extends Simulation {
             .contentTypeHeader("application/json"); // Nagłówek Content-Type jako JSON
 
     // Definicja scenariusza
-    private ScenarioBuilder scn = scenario("CSV Feeder Scenario")
+    private final ScenarioBuilder scn = scenario("CSV Feeder Scenario")
             .feed(feeder)
             .exec(
                     http("Post JSON Request")
