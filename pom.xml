@@ -39,6 +39,13 @@
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven-jar-plugin.version}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>src.test.java.regresInAndComputerDatabaseSite.RegresInSimulationAndAssertions</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>io.gatling</groupId>
